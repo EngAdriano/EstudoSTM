@@ -1,0 +1,185 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "Teste do Ki-CAD Paginação e STM"
+Date "2021-09-09"
+Rev "1.0"
+Comp "Dell - Lead"
+Comment1 "Testes para paginação no KiCad e Microcontrolador STM."
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_ST_STM32L4:STM32L496ZGTxP U?
+U 1 1 613A18C1
+P 8350 5600
+F 0 "U?" H 8350 1911 50  0000 C CNN
+F 1 "STM32L496ZGTxP" H 8350 1820 50  0000 C CNN
+F 2 "Package_QFP:LQFP-144_20x20mm_P0.5mm" H 7250 2200 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00284211.pdf" H 8350 5600 50  0001 C CNN
+	1    8350 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal Y?
+U 1 1 613B0826
+P 10450 10350
+F 0 "Y?" H 10300 10450 50  0000 C CNN
+F 1 "32.768KHz" H 10450 10173 50  0000 C CNN
+F 2 "" H 10450 10350 50  0001 C CNN
+F 3 "~" H 10450 10350 50  0001 C CNN
+	1    10450 10350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 613B1EAF
+P 10700 10600
+F 0 "C?" H 10815 10646 50  0000 L CNN
+F 1 "3.9pF" H 10815 10555 50  0000 L CNN
+F 2 "" H 10738 10450 50  0001 C CNN
+F 3 "~" H 10700 10600 50  0001 C CNN
+	1    10700 10600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 613B27E8
+P 10700 10100
+F 0 "C?" H 10815 10146 50  0000 L CNN
+F 1 "3.9pF" H 10815 10055 50  0000 L CNN
+F 2 "" H 10738 9950 50  0001 C CNN
+F 3 "~" H 10700 10100 50  0001 C CNN
+	1    10700 10100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 613B3178
+P 10950 10750
+F 0 "#PWR?" H 10950 10500 50  0001 C CNN
+F 1 "GND" H 10955 10577 50  0000 C CNN
+F 2 "" H 10950 10750 50  0001 C CNN
+F 3 "" H 10950 10750 50  0001 C CNN
+	1    10950 10750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10450 10200 10450 10100
+Wire Wire Line
+	10450 10100 10550 10100
+Wire Wire Line
+	10450 10500 10450 10600
+Wire Wire Line
+	10450 10600 10550 10600
+Text GLabel 9800 7100 2    50   Input ~ 0
+OSC32_IN
+Text GLabel 9800 7200 2    50   Output ~ 0
+OSC32_OUT
+Wire Wire Line
+	9800 7100 9650 7100
+Wire Wire Line
+	9800 7200 9650 7200
+Wire Wire Line
+	10850 10100 10950 10100
+Wire Wire Line
+	10950 10100 10950 10600
+Wire Wire Line
+	10850 10600 10950 10600
+Connection ~ 10950 10600
+Wire Wire Line
+	10950 10600 10950 10750
+Text GLabel 10150 10100 0    50   Output ~ 0
+OSC32_IN
+Text GLabel 10150 10600 0    50   Input ~ 0
+OSC32_OUT
+Wire Wire Line
+	10150 10100 10450 10100
+Connection ~ 10450 10100
+Wire Wire Line
+	10150 10600 10450 10600
+Connection ~ 10450 10600
+$Comp
+L Device:Crystal Y?
+U 1 1 613C492C
+P 8250 10300
+F 0 "Y?" H 8100 10400 50  0000 C CNN
+F 1 "8MHz" H 8250 10123 50  0000 C CNN
+F 2 "" H 8250 10300 50  0001 C CNN
+F 3 "~" H 8250 10300 50  0001 C CNN
+	1    8250 10300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 613C4932
+P 8500 10550
+F 0 "C?" V 8752 10550 50  0000 C CNN
+F 1 "4.3pF" V 8661 10550 50  0000 C CNN
+F 2 "" H 8538 10400 50  0001 C CNN
+F 3 "~" H 8500 10550 50  0001 C CNN
+	1    8500 10550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 613C4938
+P 8500 10050
+F 0 "C?" V 8752 10050 50  0000 C CNN
+F 1 "4.3pF" V 8661 10050 50  0000 C CNN
+F 2 "" H 8538 9900 50  0001 C CNN
+F 3 "~" H 8500 10050 50  0001 C CNN
+	1    8500 10050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 613C493E
+P 8750 10700
+F 0 "#PWR?" H 8750 10450 50  0001 C CNN
+F 1 "GND" H 8755 10527 50  0000 C CNN
+F 2 "" H 8750 10700 50  0001 C CNN
+F 3 "" H 8750 10700 50  0001 C CNN
+	1    8750 10700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 10150 8250 10050
+Wire Wire Line
+	8250 10050 8350 10050
+Wire Wire Line
+	8250 10450 8250 10550
+Wire Wire Line
+	8250 10550 8350 10550
+Wire Wire Line
+	8650 10050 8750 10050
+Wire Wire Line
+	8750 10050 8750 10550
+Wire Wire Line
+	8650 10550 8750 10550
+Connection ~ 8750 10550
+Wire Wire Line
+	8750 10550 8750 10700
+Text GLabel 7950 10050 0    50   Output ~ 0
+OSC_IN
+Text GLabel 7950 10550 0    50   Input ~ 0
+OSC_OUT
+Wire Wire Line
+	7950 10050 8250 10050
+Connection ~ 8250 10050
+Wire Wire Line
+	7950 10550 8250 10550
+Connection ~ 8250 10550
+Text GLabel 6900 3700 0    50   Output ~ 0
+OSC_IN
+Text GLabel 6900 3800 0    50   Input ~ 0
+OSC_OUT
+Wire Wire Line
+	6900 3700 7050 3700
+Wire Wire Line
+	6900 3800 7050 3800
+$EndSCHEMATC
