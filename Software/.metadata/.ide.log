@@ -729,3 +729,7 @@
 2021-10-14 16:46:32,667 [INFO] ApiDb:280 - User favorites MCUs=[]
 2021-10-14 16:46:40,708 [INFO] RetryExec:97 - I/O exception (java.net.SocketException) caught when processing request to {}->http://sw-center.st.com:80: Socket closed
 2021-10-14 16:46:40,709 [INFO] RetryExec:113 - Retrying request to {}->http://sw-center.st.com:80
+2021-11-09 10:32:40,611 [INFO] Activator:177 - 
+
+
+2021-11-09 10:32:40,611 [INFO] Activator:178 - !SESSION log4j initialized
